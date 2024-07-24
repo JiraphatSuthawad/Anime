@@ -39,8 +39,8 @@ const Navbars = ({ inputData, setInputData, Dis }) => {
         </NavbarContent>
       </NavbarBrand>
 
-      <NavbarBrand className=" flex justify-center items-center sm:flex gap-3  sm:justify-start">
-        <NavbarItem className="">
+      <NavbarBrand className=" flex justify-center items-center sm:flex gap-5 sm:justify-start">
+        <NavbarItem className="px-5">
           <Link
             to="/"
             className="font-bold text-xl text-black hover:text-pink-500"
@@ -49,7 +49,7 @@ const Navbars = ({ inputData, setInputData, Dis }) => {
           </Link>
         </NavbarItem>
 
-        <NavbarItem>
+        <NavbarItem className="px-5">
           <Link
             to="/Favorite"
             className="font-bold text-xl text-black hover:text-red-400"
@@ -58,7 +58,7 @@ const Navbars = ({ inputData, setInputData, Dis }) => {
           </Link>
         </NavbarItem>
 
-        <NavbarItem>
+        <NavbarItem className="px-5">
           <Link
             to="/Catagory"
             className="font-bold text-xl text-black hover:text-sky-400"
@@ -67,7 +67,7 @@ const Navbars = ({ inputData, setInputData, Dis }) => {
           </Link>
         </NavbarItem>
 
-        <NavbarItem>
+        <NavbarItem className="px-5">
           <Link
             to="/Random"
             className="font-bold text-xl text-black hover:text-violet-600"

@@ -19,17 +19,27 @@ const MidleSchool = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState("");
-  const [offset, setOffset] = useState(20);
-  const [currentPage, setCurrentPage] = useState(1);
   const [sortAZ, setSortAZ] = useState(false);
   const [selectedAnime, setSelectedAnime] = useState(null);
   const [pageCount, setPageCount] = useState(0);
   const animeIds = Id[0].data.map((anime) => anime.id);
+  const [offset, setOffset] = useState(
+    localStorage.getItem("offset")
+      ? parseInt(localStorage.getItem("offset"))
+      : 1
+  );
+  const [currentPage, setCurrentPage] = useState(
+    localStorage.getItem("currentPage")
+      ? parseInt(localStorage.getItem("currentPage"))
+      : 1
+  );
 
   const handlePageClick = (page) => {
     const newOffset = page * 20;
     setOffset(newOffset);
     setCurrentPage(page);
+    localStorage.setItem("offset", newOffset);
+    localStorage.setItem("currentPage", page);
   };
 
   useEffect(() => {
@@ -115,7 +125,7 @@ const MidleSchool = () => {
                         key={uuidv4()}
                         src={anime.attributes?.posterImage?.medium}
                         alt={anime.attributes?.titles?.en}
-                        className="object-cover rounded-xl img-border justify-self-center my-5"
+                        className="object-cover rounded-xl img-border justify-self-center my-5 "
                         width={270}
                       />
                     </div>
