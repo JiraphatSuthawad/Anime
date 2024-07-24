@@ -39,8 +39,8 @@ const Navbars = ({ inputData, setInputData, Dis }) => {
         </NavbarContent>
       </NavbarBrand>
 
-      <NavbarBrand className="flex sm:flex gap-3  items-center justify-center sm:justify-start">
-        <NavbarItem>
+      <NavbarBrand className=" flex justify-center items-center sm:flex gap-3  sm:justify-start">
+        <NavbarItem className="">
           <Link
             to="/"
             className="font-bold text-xl text-black hover:text-pink-500"

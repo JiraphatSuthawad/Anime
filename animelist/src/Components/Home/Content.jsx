@@ -118,9 +118,12 @@ const Content = () => {
                         className="flex-col justify-center mx-10 cursor-pointer box"
                         onClick={() => setSelectedAnime(anime)}
                       >
-                        <p className="text-2xl truncate hover:text-balance text-white sm:text-lg md:text-xl">
-                          {anime.attributes?.titles?.en_jp}
-                        </p>
+                        <div className="h-8">
+                          <p className="text-2xl truncate hover:text-balance text-white sm:text-lg md:text-xl">
+                            {anime.attributes?.titles?.en_jp}
+                          </p>
+                        </div>
+
                         <img
                           src={anime.attributes?.posterImage?.medium}
                           alt={anime.attributes?.titles?.en}

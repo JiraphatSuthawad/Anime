@@ -22,7 +22,7 @@ const Favorite = () => {
   };
 
   return (
-    <div className="w-full fav-bg">
+    <div className="fav-bg w-full h-dvh">
       {selectedAnime ? (
         <DetailView
           anime={selectedAnime}
@@ -42,9 +42,11 @@ const Favorite = () => {
                   <div className="flex-col " key={anime.id}>
                     <Card className="bg-white/20">
                       <div className="flex-col justify-center mx-10 box ">
-                        <p className="text-2xl truncate text-white ">
-                          {anime.attributes?.titles?.en_jp}
-                        </p>
+                        <div className="h-8">
+                          <p className="text-2xl truncate hover:text-balance text-white sm:text-lg md:text-xl">
+                            {anime.attributes?.titles?.en_jp}
+                          </p>
+                        </div>
                         <img
                           src={anime.attributes?.posterImage?.medium}
                           alt={anime.attributes?.titles?.en}

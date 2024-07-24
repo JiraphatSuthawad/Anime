@@ -105,12 +105,11 @@ const MidleSchool = () => {
                       key={uuidv4()}
                       onClick={() => setSelectedAnime(anime)}
                     >
-                      <p
-                        key={uuidv4()}
-                        className=" text-2xl truncate hover:text-balance  text-white "
-                      >
-                        {anime.attributes?.titles?.en_jp}
-                      </p>
+                      <div className="h-8">
+                        <p className="text-2xl truncate hover:text-balance text-white sm:text-lg md:text-xl">
+                          {anime.attributes?.titles?.en_jp}
+                        </p>
+                      </div>
 
                       <img
                         key={uuidv4()}
