@@ -17,16 +17,15 @@ import { Divider } from "@nextui-org/divider";
 import { SearchIcon } from "./Button/SearchIcon";
 
 const Navbars = ({ inputData, setInputData, Dis }) => {
-  const [data, setData] = useState([]);
-  const [offset, setOffset] = useState(0);
-  const [inputText, setInputText] = useState();
+  const [inputText, setInputText] = useState("");
 
   const addInput = (e) => {
-    setInputData(e.target.value);
+    setInputText(e.target.value);
   };
 
   const handleSearchClick = () => {
     setInputData(inputText);
+    setInputText("");
   };
 
   return (
@@ -78,16 +77,25 @@ const Navbars = ({ inputData, setInputData, Dis }) => {
       </NavbarBrand>
 
       <NavbarBrand className="flex justify-end items-center w-full">
-        <NavbarItem>
+        <NavbarItem className="flex items-center">
           <Input
-            key="inside"
             type="text"
             label="Searching.."
             size="sm"
             className="w-4/4"
             disabled={Dis}
             onChange={addInput}
+            value={inputText}
           />
+          <Button
+            onClick={handleSearchClick}
+            disabled={Dis}
+            color="white"
+            variant="ghost"
+            className="mx-3 font-bold text-lg text-black h-12 bg-white/50"
+          >
+            Click
+          </Button>
         </NavbarItem>
       </NavbarBrand>
     </Navbar>
