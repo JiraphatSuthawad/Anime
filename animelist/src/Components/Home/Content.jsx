@@ -33,6 +33,13 @@ const Content = () => {
   const debouncedSearchTerm = useDebounce(inputData, 400);
   const [dis, setDis] = useState(false);
 
+  useEffect(() => {
+    localStorage.removeItem("offset");
+    localStorage.removeItem("currentPage");
+    setOffset(0);
+    setCurrentPage(1);
+  }, []);
+
   const handlePageClick = (page) => {
     const newOffset = page * 20;
     setOffset(newOffset);
@@ -89,6 +96,7 @@ const Content = () => {
             inputData={inputData}
             setInputData={setInputData}
             Dis={dis}
+            setDis={setDis}
           />
           <Trending />
           <div className="flex flex-col sm:flex-row justify-between items-center m-4">

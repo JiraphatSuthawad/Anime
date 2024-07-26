@@ -1,22 +1,16 @@
-import React, { useEffect } from "react";
-import axios from "axios";
-import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-import { Spinner } from "@nextui-org/react";
-import { Button, ButtonGroup } from "@nextui-org/button";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  NavbarMenu,
+  Input,
 } from "@nextui-org/react";
-import { Input } from "@nextui-org/react";
-import { Divider } from "@nextui-org/divider";
-import { SearchIcon } from "./Button/SearchIcon";
+import Swal from "sweetalert2";
+import ButtonSearch from "./Button/Button-Search";
 
-const Navbars = ({ inputData, setInputData, Dis }) => {
+const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
   const [inputText, setInputText] = useState("");
 
   const addInput = (e) => {
@@ -24,21 +18,28 @@ const Navbars = ({ inputData, setInputData, Dis }) => {
   };
 
   const handleSearchClick = () => {
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: `Seach : ${inputText}`,
+      showConfirmButton: false,
+      timer: 1500,
+    });
     setInputData(inputText);
     setInputText("");
   };
 
   return (
-    <Navbar isBordered maxWidth="full" className=" light overflow-auto ">
-      <NavbarBrand className="col-span-2 w-80 ">
+    <Navbar isBordered maxWidth="full" className="overflow-auto">
+      <NavbarBrand className="col-span-2 w-80">
         <NavbarContent className="mr-4">
-          <NavbarItem className=" font-bold text-5xl text-inherit text-black focus-in-expand-fwd max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-4xl ">
+          <NavbarItem className="font-bold text-5xl text-inherit text-black focus-in-expand-fwd max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-4xl">
             AnimeList
           </NavbarItem>
         </NavbarContent>
       </NavbarBrand>
 
-      <NavbarBrand className=" flex justify-center items-center sm:flex gap-5 sm:justify-start">
+      <NavbarBrand className="flex justify-center items-center sm:flex gap-5 sm:justify-start">
         <NavbarItem className="px-5">
           <Link
             to="/"
@@ -62,7 +63,7 @@ const Navbars = ({ inputData, setInputData, Dis }) => {
             to="/Catagory"
             className="font-bold text-xl text-black hover:text-sky-400"
           >
-            Catagory
+            Category
           </Link>
         </NavbarItem>
 
@@ -82,20 +83,16 @@ const Navbars = ({ inputData, setInputData, Dis }) => {
             type="text"
             label="Searching.."
             size="sm"
-            className="w-4/4"
+            className="w-80"
             disabled={Dis}
             onChange={addInput}
             value={inputText}
           />
-          <Button
-            onClick={handleSearchClick}
-            disabled={Dis}
-            color="white"
-            variant="ghost"
-            className="mx-3 font-bold text-lg text-black h-12 bg-white/50"
-          >
-            Click
-          </Button>
+          <ButtonSearch
+            handleSearchClick={handleSearchClick}
+            Dis={Dis}
+            inputText={inputText}
+          />
         </NavbarItem>
       </NavbarBrand>
     </Navbar>

@@ -34,6 +34,13 @@ const Elf = () => {
       : 1
   );
 
+  useEffect(() => {
+    localStorage.removeItem("offset");
+    localStorage.removeItem("currentPage");
+    setOffset(20);
+    setCurrentPage(1);
+  }, []);
+
   const handlePageClick = (page) => {
     const newOffset = page * 20;
     setOffset(newOffset);

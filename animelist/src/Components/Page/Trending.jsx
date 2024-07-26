@@ -48,7 +48,7 @@ const Trending = () => {
             <div className="font-bold text-4xl text-white btn ">
               TOP 10 Anime
             </div>
-            <div className="grid grid-flow-col auto-cols-max gap-5 overflow-x-auto whitespace-nowrap  ">
+            <div className="grid grid-flow-col auto-cols-max gap-0 overflow-x-auto whitespace-nowrap ">
               {loading ? (
                 <Spinner color="secondary" labelColor="secondary" />
               ) : (
@@ -60,7 +60,7 @@ const Trending = () => {
                     <img
                       src={anime.attributes?.posterImage?.medium}
                       alt={anime.attributes?.titles?.en}
-                      className="object-cover rounded-xl img-border justify-self-center my-5 cursor-pointer w-72 max-sm:w-40 max-md:w-50 max-lg:w-60 max-xl:w-65"
+                      className="object-cover rounded-xl img-border justify-self-center my-5 cursor-pointer w-72 max-sm:w-20 max-md:w-30 max-lg:w-40 max-xl:w-65"
                       onClick={() => setSelectedAnime(anime)}
                     />
                   </div>

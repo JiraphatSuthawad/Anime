@@ -46,15 +46,15 @@ function Random() {
     >
       <Navbars />
       <Card className="m-10 bg-white/70 ">
-        <div className="flex justify-center m-10  ">
+        <div className="flex justify-center m-10 max-sm:flex-col max-md:flex-col max-lg:flex-col max-xl:flex-col  ">
           <img
-            className="m-10 rounded-xl  max-h-full  "
+            className="m-10 rounded-xl max-h-full  "
             key={data?.id}
             src={data?.attributes?.posterImage?.medium}
             alt={data?.attributes?.titles?.en}
           />
 
-          <div className="flex-col justify-center focus-in-expand-fwd  ">
+          <div className="flex-col justify-center focus-in-expand-fwd max-sm:flex-col max-md:flex-col max-lg:flex-col max-xl:flex-col ">
             <div
               key={uuidv4()}
               className="text-6xl  font-medium text-black px-10 pt-10 pb-2 focus-in-expand-fwd "
@@ -71,20 +71,20 @@ function Random() {
             >
               RatingAnime : {data?.attributes?.averageRating}
             </div>
-            <div className="text-xl font-medium text-black    p-10  text-ellipsis overflow-hidden focus-in-expand-fwd">
+            <div className="text-xl font-medium text-black  p-10  text-ellipsis overflow-hidden focus-in-expand-fwd">
               Description : {data?.attributes?.description}
             </div>
-            <div>
-              <span className="text-xl font-medium text-black  text-clip p-10 focus-in-expand-fwd">
+            <div className="max-sm:flex-col max-md:flex-col max-lg:flex-col max-xl:flex-col">
+              <div className="text-xl font-medium text-black  text-clip px-10 pt-3 pb-2 focus-in-expand-fwd">
                 AgeRating : {data?.attributes?.ageRatingGuide}
-              </span>
+              </div>
 
-              <span className="text-xl font-medium text-black px-10 focus-in-expand-fwd">
+              <div className="text-xl font-medium text-black  text-clip px-10 pt-3 pb-2 focus-in-expand-fwd">
                 Type : {data?.attributes?.showType}
-              </span>
-              <span className="text-xl font-medium text-black  text-clip p-10 focus-in-expand-fwd">
+              </div>
+              <div className="text-xl font-medium text-black  text-clip px-10 pt-3 pb-2 focus-in-expand-fwd">
                 Episode : {data?.attributes?.episodeLength}
-              </span>
+              </div>
             </div>
           </div>
         </div>

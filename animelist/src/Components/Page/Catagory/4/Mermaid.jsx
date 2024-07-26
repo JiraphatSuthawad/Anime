@@ -26,6 +26,13 @@ const Mermaid = () => {
   const [pageCount, setPageCount] = useState(0);
   const animeIds = Id[0].data.map((anime) => anime.id);
 
+  useEffect(() => {
+    localStorage.removeItem("offset");
+    localStorage.removeItem("currentPage");
+    setOffset(0);
+    setCurrentPage(0);
+  }, []);
+
   const handlePageClick = (page) => {
     const newOffset = 0 * 20;
     setOffset(newOffset);

@@ -1,9 +1,7 @@
-// ในไฟล์ pages/favorite.js
 import React, { useEffect, useState } from "react";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import Navbars from "../commons/Navbars";
 import { Button } from "@nextui-org/button";
-import { filterProps } from "framer-motion";
 import DetailView from "../commons/DetailView";
 
 const Favorite = () => {
@@ -30,7 +28,7 @@ const Favorite = () => {
         />
       ) : (
         <>
-          <Navbars />
+          <Navbars disabled={true} />
           <div className="grid bg-pan-left ">
             <div className="text-4xl font-bold text-white m-8 btn w-fit flex flex-col sm:flex-row justify-between items-center ">
               Favorite Anime

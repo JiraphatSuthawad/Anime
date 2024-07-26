@@ -26,6 +26,13 @@ const Cycling = () => {
   const [pageCount, setPageCount] = useState(0);
   const animeIds = Id[0].data.map((anime) => anime.id);
 
+  useEffect(() => {
+    localStorage.removeItem("offset");
+    localStorage.removeItem("currentPage");
+    setOffset(0);
+    setCurrentPage(1);
+  }, []);
+
   const handlePageClick = (page) => {
     const newOffset = page * 20;
     setOffset(newOffset);
