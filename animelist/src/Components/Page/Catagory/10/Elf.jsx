@@ -14,6 +14,7 @@ import {
   PaginationCursor,
 } from "@nextui-org/react";
 import ButtonHR from "../../../commons/Button/Button-HR";
+import { Skeleton } from "@nextui-org/react";
 
 const Elf = () => {
   const [data, setData] = useState([]);
@@ -114,7 +115,28 @@ const Elf = () => {
           <div>
             <div className="grid grid-cols-5 gap-4 mx-10 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3 max-xl:grid-cols-4">
               {loading ? (
-                <Spinner color="secondary" labelColor="secondary" />
+                <>
+                  {Array.from({ length: 20 }).map((_, index) => (
+                    <Skeleton key={index} className="rounded-lg ">
+                      <Card className="w-[200px] space-y-5 p-4" radius="lg">
+                        <Skeleton className="rounded-lg">
+                          <div className="h-24 rounded-lg bg-default-300"></div>
+                        </Skeleton>
+                        <div className="space-y-3">
+                          <Skeleton className="w-3/5 rounded-lg">
+                            <div className="h-3 w-3/5 rounded-lg bg-default-200"></div>
+                          </Skeleton>
+                          <Skeleton className="w-4/5 rounded-lg">
+                            <div className="h-3 w-4/5 rounded-lg bg-default-200"></div>
+                          </Skeleton>
+                          <Skeleton className="w-2/5 rounded-lg">
+                            <div className="h-3 w-2/5 rounded-lg bg-default-300"></div>
+                          </Skeleton>
+                        </div>
+                      </Card>
+                    </Skeleton>
+                  ))}
+                </>
               ) : (
                 filteredData.map((anime) => (
                   <Card className="bg-white/20">
@@ -135,6 +157,7 @@ const Elf = () => {
                         alt={anime.attributes?.titles?.en}
                         className="object-cover rounded-xl img-border justify-self-center my-5"
                         width={270}
+                        onLoad={() => setLoading(false)}
                       />
                     </div>
                     <CardFooter className="justify-center absolute bottom-1">
