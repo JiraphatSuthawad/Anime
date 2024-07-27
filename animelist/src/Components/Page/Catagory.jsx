@@ -32,7 +32,7 @@ const Catagory = () => {
     <div className=" w-full cat-bg">
       <Navbars />
       <div className="flex justify-center mt-7 ">
-        <div className="grid grid-cols-5 gap-4 mx-10 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3 max-xl:grid-cols-4  ">
+        <div className="grid grid-cols-5 gap-4 mx-15 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3 max-xl:grid-cols-4  ">
           <Link
             to="/Catagory/MidleSchool"
             isFooterBlurred
