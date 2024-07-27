@@ -5,7 +5,7 @@ import App from "./App";
 import "./index.css";
 import Random from "./Components/Page/Random";
 import DetailView from "./Components/commons/DetailView";
-import Catagory from "./Components/Page/Catagory";
+import Cetagory from "./Components/Page/Cetegory";
 import MidleSchool from "./Components/Page/Catagory/1/MidleSchool";
 import Cycling from "./Components/Page/Catagory/2/Cycling";
 import ElementarySchool from "./Components/Page/Catagory/3/ElementarySchool";
@@ -28,8 +28,8 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/Category",
-    element: <Category />,
+    path: "/Cetegory",
+    element: <Cetegory />,
   },
 
   {
@@ -46,27 +46,27 @@ const router = createBrowserRouter([
     element: <Trending />,
   },
   {
-    path: "/Category/MidleSchool",
+    path: "/Cetegory/MidleSchool",
     element: <MidleSchool />,
   },
   {
-    path: "/Category/Cycling",
+    path: "/Cetegory/Cycling",
     element: <Cycling />,
   },
   {
-    path: "/Category/ElementarySchool",
+    path: "/Cetegory/ElementarySchool",
     element: <ElementarySchool />,
   },
   {
-    path: "/Category/Mermaid",
+    path: "/Cetegory/Mermaid",
     element: <Mermaid />,
   },
   {
-    path: "/Category/Android",
+    path: "/Cetegory/Android",
     element: <Android />,
   },
   {
-    path: "/Category/AllGirlSchool",
+    path: "/Cetegory/AllGirlSchool",
     element: <AllGirlSchool />,
   },
   {
