@@ -18,15 +18,23 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
   };
 
   const handleSearchClick = () => {
-    Swal.fire({
-      position: "center",
-      icon: "success",
-      title: `Seach : ${inputText}`,
-      showConfirmButton: false,
-      timer: 1500,
-    });
-    setInputData(inputText);
-    setInputText("");
+    if (inputText !== "") {
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: `Seach : ${inputText}`,
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      setInputData(inputText);
+      setInputText("");
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+      });
+    }
   };
 
   return (
