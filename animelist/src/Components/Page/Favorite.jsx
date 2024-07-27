@@ -20,7 +20,7 @@ const Favorite = () => {
   };
 
   return (
-    <div className="w-full h-dvh fav-bg">
+    <div className=" h-dvh fav-bg">
       {selectedAnime ? (
         <DetailView
           anime={selectedAnime}
@@ -29,12 +29,12 @@ const Favorite = () => {
       ) : (
         <>
           <Navbars disabled={true} />
-          <div className="grid bg-pan-left ">
+          <div className="grid bg-pan-left  ">
             <div className="text-4xl font-bold text-white m-8 btn w-fit flex flex-col sm:flex-row justify-between items-center ">
               Favorite Anime
             </div>
 
-            <div className="grid grid-cols-5 gap-4 mx-10 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3 max-xl:grid-cols-4 ">
+            <div className="grid grid-cols-5 gap-4 mx-10 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3 max-xl:grid-cols-4  fav-bg">
               {favorites.length > 0 ? (
                 favorites.map((anime) => (
                   <div className="flex-col " key={anime.id}>
