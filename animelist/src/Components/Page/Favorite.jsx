@@ -20,7 +20,7 @@ const Favorite = () => {
   };
 
   return (
-    <div className="w-full h-dvh fav-bg">
+    <div className="w-full h-full fav-bg">
       {selectedAnime ? (
         <DetailView
           anime={selectedAnime}
