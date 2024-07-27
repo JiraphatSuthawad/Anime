@@ -5,7 +5,7 @@ import App from "./App";
 import "./index.css";
 import Random from "./Components/Page/Random";
 import DetailView from "./Components/commons/DetailView";
-import Cetagory from "./Components/Page/Cetegory";
+import Cetegory from "./Components/Page/Cetegory";
 import MidleSchool from "./Components/Page/Catagory/1/MidleSchool";
 import Cycling from "./Components/Page/Catagory/2/Cycling";
 import ElementarySchool from "./Components/Page/Catagory/3/ElementarySchool";
