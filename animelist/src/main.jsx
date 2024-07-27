@@ -28,8 +28,8 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/Catagory",
-    element: <Catagory />,
+    path: "/Category",
+    element: <Category />,
   },
 
   {
@@ -46,43 +46,43 @@ const router = createBrowserRouter([
     element: <Trending />,
   },
   {
-    path: "/Catagory/MidleSchool",
+    path: "/Category/MidleSchool",
     element: <MidleSchool />,
   },
   {
-    path: "/Catagory/Cycling",
+    path: "/Category/Cycling",
     element: <Cycling />,
   },
   {
-    path: "/Catagory/ElementarySchool",
+    path: "/Category/ElementarySchool",
     element: <ElementarySchool />,
   },
   {
-    path: "/Catagory/Mermaid",
+    path: "/Category/Mermaid",
     element: <Mermaid />,
   },
   {
-    path: "/Catagory/Android",
+    path: "/Category/Android",
     element: <Android />,
   },
   {
-    path: "/Catagory/AllGirlSchool",
+    path: "/Category/AllGirlSchool",
     element: <AllGirlSchool />,
   },
   {
-    path: "/Catagory/Vampire",
+    path: "/Category/Vampire",
     element: <Vampire />,
   },
   {
-    path: "/Catagory/Wrestling",
+    path: "/Category/Wrestling",
     element: <Wrestling />,
   },
   {
-    path: "/Catagory/Samurai",
+    path: "/Category/Samurai",
     element: <Samurai />,
   },
   {
-    path: "/Catagory/Elf",
+    path: "/Category/Elf",
     element: <Elf />,
   },
 ]);

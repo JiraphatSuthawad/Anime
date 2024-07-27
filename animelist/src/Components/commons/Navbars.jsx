@@ -69,7 +69,7 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
 
         <NavbarItem className="px-5">
           <Link
-            to="/Catagory"
+            to="/Category"
             className="font-bold text-xl text-black hover:text-sky-400"
             onClick={() => setDis(true)}
           >
