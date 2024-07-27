@@ -85,7 +85,7 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
         </NavbarItem>
       </NavbarBrand>
 
-      <NavbarBrand className="flex justify-end items-center w-full">
+      <NavbarBrand className="flex justify-end items-center px-2 sm:flex sm:justify-start">
         <NavbarItem className="flex items-center">
           <Input
             type="text"
