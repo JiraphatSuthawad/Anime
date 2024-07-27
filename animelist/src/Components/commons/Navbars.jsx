@@ -22,7 +22,7 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
       Swal.fire({
         position: "center",
         icon: "success",
-        title: `Seach : ${inputText}`,
+        title: `Search: ${inputText}`,
         showConfirmButton: false,
         timer: 1500,
       });
@@ -85,7 +85,7 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
         </NavbarItem>
       </NavbarBrand>
 
-      <NavbarBrand className="flex justify-end items-center px-2 sm:flex sm:justify-start">
+      <NavbarBrand className="ml-auto flex justify-end items-center px-2">
         <NavbarItem className="flex items-center">
           <Input
             type="text"

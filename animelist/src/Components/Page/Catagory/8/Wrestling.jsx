@@ -39,7 +39,7 @@ const Wrestling = () => {
     localStorage.removeItem("offset");
     localStorage.removeItem("currentPage");
     setOffset(0);
-    setCurrentPage(1);
+    setCurrentPage(0);
   }, []);
 
   const handlePageClick = (page) => {
@@ -174,7 +174,7 @@ const Wrestling = () => {
           <div className="flex justify-center pb-5 pt-10 bg-white/30 ">
             <Pagination
               showControls
-              total={pageCount}
+              total={1}
               initialPage={currentPage}
               onChange={handlePageClick}
               color="secondary"
