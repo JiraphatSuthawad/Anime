@@ -20,7 +20,7 @@ const Favorite = () => {
   };
 
   return (
-    <div className=" h-dvh fav-bg">
+    <div className="  fav-bg">
       {selectedAnime ? (
         <DetailView
           anime={selectedAnime}
@@ -34,7 +34,7 @@ const Favorite = () => {
               Favorite Anime
             </div>
 
-            <div className="grid grid-cols-5 gap-4 mx-10 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3 max-xl:grid-cols-4  fav-bg">
+            <div className="grid grid-cols-5 gap-4 mx-10 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3 max-xl:grid-cols-4 ">
               {favorites.map((anime) => (
                 <div className="flex-col " key={anime.id}>
                   <Card className="bg-white/20 ">

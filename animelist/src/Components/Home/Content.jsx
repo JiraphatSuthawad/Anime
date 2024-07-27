@@ -32,13 +32,6 @@ const Content = () => {
   const debouncedSearchTerm = useDebounce(inputData, 400);
   const [dis, setDis] = useState(false);
 
-  useEffect(() => {
-    localStorage.removeItem("offset");
-    localStorage.removeItem("currentPage");
-    setOffset(0);
-    setCurrentPage(1);
-  }, []);
-
   const handlePageClick = (page) => {
     setLoading(true);
     const newOffset = page * 20;
@@ -170,6 +163,7 @@ const Content = () => {
               )}
             </div>
           </div>
+
           <div className="flex justify-center pb-5 pt-10 bg-white/30">
             <Pagination
               showControls
