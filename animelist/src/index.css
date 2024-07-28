@@ -247,3 +247,22 @@
     transition: all 0.4s ease 0s;
     transform: translateY(-0.5em);
 }
+
+
+.bg-h-dvh {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .bg-h-dvh {
+        background-size: cover;
+    }
+}
+
+@media (min-width: 1024px) {
+    .bg-h-dvh {
+        background-size: cover;
+    }
+}

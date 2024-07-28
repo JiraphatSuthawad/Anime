@@ -7,7 +7,7 @@ import { Image, Button } from "@nextui-org/react";
 function DetailView({ anime, onBack }) {
   return (
     <div
-      className="h-dvh "
+      className="bg-h-dvh bg-cover bg-center"
       style={{
         backgroundImage: `url(${anime?.attributes?.coverImage?.original})`,
         backgroundSize: "cover",
@@ -24,8 +24,8 @@ function DetailView({ anime, onBack }) {
           X
         </Button>
       </div>
-      <Card className="m-10 bg-white/70">
-        <div className="flex justify-center m-20">
+      <Card className="m-10 bg-white/70 ">
+        <div className="flex flex-col lg:flex-row justify-center items-center mb-20">
           <img
             className="m-10 rounded-xl max-h-full focus-in-expand-fwd "
             key={anime?.id}
@@ -34,10 +34,10 @@ function DetailView({ anime, onBack }) {
             width={270}
           />
 
-          <div className="flex-col justify-center">
+          <div className="flex flex-col justify-center items-center lg:items-start w-full lg:w-auto sm:text-lg md:text-xl">
             <div
               key={uuidv4()}
-              className="text-6xl  font-medium text-black px-10 pt-10 pb-2 focus-in-expand-fwd "
+              className="text-6xl font-medium text-black px-10 pt-10 pb-2 focus-in-expand-fwd"
             >
               {anime?.attributes?.titles?.en_jp}
             </div>
@@ -45,26 +45,25 @@ function DetailView({ anime, onBack }) {
             <span className="text-xl font-medium text-black px-10 focus-in-expand-fwd">
               {anime?.attributes?.titles?.ja_jp}
             </span>
+
+            {/* ซ่อนข้อมูลเหล่านี้เมื่ออยู่หน้าจอ lg */}
             <div
               key={uuidv4()}
-              className="text-3xl truncate font-medium text-black  px-10 pt-10 pb-2 focus-in-expand-fwd "
+              className="text-3xl truncate font-medium text-black px-10 pt-10 pb-2 focus-in-expand-fwd max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-4xl hidden lg:block"
             >
-              RatingAnime : {anime?.attributes?.averageRating}
+              RatingAnime: {anime?.attributes?.averageRating}
             </div>
-            <div className="text-xl font-medium text-black  text-clip p-10 focus-in-expand-fwd">
-              Description : {anime?.attributes?.description}
+            <div className="text-xl font-medium text-black text-wrap p-10 focus-in-expand-fwd max-sm:text-lg max-md:text-2xl max-lg:text-3xl max-xl:text-4xl hidden lg:block">
+              Description: {anime?.attributes?.description}
             </div>
-            <div>
-              <span className="text-xl font-medium text-black  text-clip p-10 focus-in-expand-fwd">
-                AgeRating : {anime?.attributes?.ageRatingGuide}
-              </span>
-
-              <span className="text-xl font-medium text-black px-10 focus-in-expand-fwd">
-                Type : {anime?.attributes?.showType}
-              </span>
-              <span className="text-xl font-medium text-black  text-clip p-10 focus-in-expand-fwd">
-                Episode : {anime?.attributes?.episodeLength}
-              </span>
+            <div className="text-xl font-medium text-black text-clip mx-10 focus-in-expand-fwd hidden lg:block">
+              AgeRating: {anime?.attributes?.ageRatingGuide}
+            </div>
+            <div className="text-xl font-medium text-black mx-10 focus-in-expand-fwd hidden lg:block">
+              Type: {anime?.attributes?.showType}
+            </div>
+            <div className="text-xl font-medium text-black mx-10 text-clip focus-in-expand-fwd hidden lg:block">
+              Episode: {anime?.attributes?.episodeLength}
             </div>
           </div>
         </div>

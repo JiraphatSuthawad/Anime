@@ -37,40 +37,31 @@ const Trending = () => {
 
   return (
     <div className="">
-      {selectedAnime ? (
-        <DetailView
-          anime={selectedAnime}
-          onBack={() => setSelectedAnime(null)}
-        />
-      ) : (
-        <>
-          <div className="p-5">
-            <div className="font-bold text-4xl text-white btn ">
-              TOP 10 Anime
-            </div>
-            <div className="grid grid-flow-col auto-cols-max gap-0 overflow-x-auto whitespace-nowrap ">
-              {loading ? (
-                <Spinner color="secondary" labelColor="secondary" />
-              ) : (
-                data.map((anime) => (
-                  <div key={anime.id} className="box ml-5 ">
-                    <h4 className="text-2xl truncate text-white hover:text-balance focus-in-expand-fwd">
-                      {anime.attributes?.titles?.en_jp}
-                    </h4>
-                    <img
-                      src={anime.attributes?.posterImage?.medium}
-                      alt={anime.attributes?.titles?.en}
-                      className="object-cover rounded-xl img-border justify-self-center my-5 cursor-pointer w-72 max-sm:w-20 max-md:w-30 max-lg:w-40 max-xl:w-65"
-                      onClick={() => setSelectedAnime(anime)}
-                    />
-                  </div>
-                ))
-              )}
-            </div>
-            <Divider className="" />
+      <>
+        <div className="p-5">
+          <div className="font-bold text-4xl text-white btn ">TOP 10 Anime</div>
+          <div className="grid grid-flow-col auto-cols-max gap-0 overflow-x-auto whitespace-nowrap ">
+            {loading ? (
+              <Spinner color="secondary" labelColor="secondary" />
+            ) : (
+              data.map((anime) => (
+                <div key={anime.id} className="box ml-5 ">
+                  <h4 className="text-2xl truncate text-white hover:text-balance focus-in-expand-fwd">
+                    {anime.attributes?.titles?.en_jp}
+                  </h4>
+                  <img
+                    src={anime.attributes?.posterImage?.medium}
+                    alt={anime.attributes?.titles?.en}
+                    className="object-cover rounded-xl img-border justify-self-center my-5  w-72 max-sm:w-30 max-md:w-30 max-lg:w-40 max-xl:w-65"
+                    onClick={() => setSelectedAnime(anime)}
+                  />
+                </div>
+              ))
+            )}
           </div>
-        </>
-      )}
+          <Divider className="" />
+        </div>
+      </>
     </div>
   );
 };
