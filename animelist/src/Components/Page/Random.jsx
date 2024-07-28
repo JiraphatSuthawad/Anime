@@ -46,9 +46,9 @@ function Random() {
     >
       <Navbars />
       <Card className="m-10 bg-white/70 ">
-        <div className="flex justify-center m-10 max-sm:flex-col max-md:flex-col max-lg:flex-col max-xl:flex-col  ">
+        <div className="flex flex-col lg:flex-row justify-center items-center m-10 max-sm:flex-col max-md:flex-col max-lg:flex-col max-xl:flex-col  ">
           <img
-            className="m-10 rounded-xl max-h-full  "
+            className="m-10 rounded-xl  max-sm:h-60 max-sm:w-40 "
             key={data?.id}
             src={data?.attributes?.posterImage?.medium}
             alt={data?.attributes?.titles?.en}

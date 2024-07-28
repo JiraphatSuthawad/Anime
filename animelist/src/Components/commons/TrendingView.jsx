@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import { Image, Button } from "@nextui-org/react";
 import Navbars from "./Navbars";
 
-function DetailView({ anime, onBack }) {
+function TrendingView({ anime, onBack }) {
   return (
     <div
       style={{
@@ -13,7 +13,6 @@ function DetailView({ anime, onBack }) {
         backgroundSize: "cover",
       }}
     >
-      <Navbars />
       <div className="flex justify-end mb-10">
         <Button
           onClick={onBack}
@@ -71,4 +70,4 @@ function DetailView({ anime, onBack }) {
   );
 }
 
-export default DetailView;
+export default TrendingView;

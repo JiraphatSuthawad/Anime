@@ -7,6 +7,7 @@ import { Spinner } from "@nextui-org/react";
 import DetailView from "../commons/DetailView";
 import { Divider } from "@nextui-org/divider";
 import ButtonHR from "../commons/Button/Button-HR";
+import TrendingView from "../commons/TrendingView";
 
 const Trending = () => {
   const [data, setData] = useState([]);
@@ -37,7 +38,12 @@ const Trending = () => {
 
   return (
     <div className="">
-      <>
+      {selectedAnime ? (
+        <TrendingView
+          anime={selectedAnime}
+          onBack={() => setSelectedAnime(null)}
+        />
+      ) : (
         <div className="p-5">
           <div className="font-bold text-4xl text-white btn ">TOP 10 Anime</div>
           <div className="grid grid-flow-col auto-cols-max gap-0 overflow-x-auto whitespace-nowrap ">
@@ -61,7 +67,7 @@ const Trending = () => {
           </div>
           <Divider className="" />
         </div>
-      </>
+      )}
     </div>
   );
 };
