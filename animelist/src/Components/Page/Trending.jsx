@@ -56,18 +56,39 @@ const Trending = () => {
               spaceBetween={50}
               pagination={{ clickable: true }}
               modules={[Pagination]}
-              className="mySwiper"
+              breakpoints={{
+                // when window width is <= 639px
+                0: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                640: {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+                // when window width is <= 767px
+                768: {
+                  slidesPerView: 4,
+                  spaceBetween: 30,
+                },
+                // when window width is <= 1023px
+                1024: {
+                  slidesPerView: 6,
+                  spaceBetween: 40,
+                },
+              }}
             >
               {data.map((anime) => (
-                <SwiperSlide key={anime.id}>
-                  <div className="box mx-5 h-70 w-72">
-                    <h4 className="text-2xl truncate text-white hover:text-balance focus-in-expand-fwd">
+                <SwiperSlide key={anime.id} className="flex justify-center">
+                  <div className="box w-full h-full mb-10 ">
+                    <h4 className="text-2xl sm:text-base md:text-lg lg:text-xl xl:text-2xl truncate text-white hover:text-balance focus-in-expand-fwd">
                       {anime.attributes?.titles?.en_jp}
                     </h4>
+
                     <img
-                      src={anime.attributes?.posterImage?.medium}
+                      src={anime.attributes?.posterImage?.original}
                       alt={anime.attributes?.titles?.en}
-                      className="object-cover rounded-xl img-border justify-self-center max-sm:w-16 max-md:w-20 max-lg:w-30 max-xl:w-50"
+                      className=" w-30 h-80 object-cover rounded-xl"
                       onClick={() => setSelectedAnime(anime)}
                     />
                   </div>

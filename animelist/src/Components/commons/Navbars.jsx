@@ -110,7 +110,7 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
             type="text"
             label="Searching.."
             size="sm"
-            className="w-60"
+            className="w-full"
             disabled={Dis}
             onChange={addInput}
             value={inputText}
