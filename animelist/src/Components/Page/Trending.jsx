@@ -53,21 +53,21 @@ const Trending = () => {
           ) : (
             <Swiper
               slidesPerView={5}
-              spaceBetween={30}
+              spaceBetween={50}
               pagination={{ clickable: true }}
               modules={[Pagination]}
               className="mySwiper"
             >
               {data.map((anime) => (
                 <SwiperSlide key={anime.id}>
-                  <div className="box ml-5">
+                  <div className="box mx-5 h-70 w-72">
                     <h4 className="text-2xl truncate text-white hover:text-balance focus-in-expand-fwd">
                       {anime.attributes?.titles?.en_jp}
                     </h4>
                     <img
                       src={anime.attributes?.posterImage?.medium}
                       alt={anime.attributes?.titles?.en}
-                      className="object-cover rounded-xl img-border justify-self-center my-5 w-72 max-sm:w-20 max-md:w-30 max-lg:w-40 max-xl:w-65"
+                      className="object-cover rounded-xl img-border justify-self-center max-sm:w-16 max-md:w-20 max-lg:w-30 max-xl:w-50"
                       onClick={() => setSelectedAnime(anime)}
                     />
                   </div>
