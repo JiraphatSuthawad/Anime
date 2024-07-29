@@ -44,8 +44,12 @@ const Trending = () => {
           onBack={() => setSelectedAnime(null)}
         />
       ) : (
-        <div className="p-5">
-          <div className="font-bold text-4xl text-white btn ">TOP 10 Anime</div>
+        <div className=" p-5">
+          <div className="flex m-4 justify-center ">
+            <div className="font-bold text-5xl text-inherit text-white btn ">
+              TOP 10 Anime
+            </div>
+          </div>
           <div className="grid grid-flow-col auto-cols-max gap-0 overflow-x-auto whitespace-nowrap ">
             {loading ? (
               <Spinner color="secondary" labelColor="secondary" />
