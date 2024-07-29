@@ -5,13 +5,18 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
   Input,
+  Button,
 } from "@nextui-org/react";
 import Swal from "sweetalert2";
 import ButtonSearch from "./Button/Button-Search";
 
 const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
   const [inputText, setInputText] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const addInput = (e) => {
     setInputText(e.target.value);
@@ -37,61 +42,75 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
     }
   };
 
+  const menuItems = [
+    { label: "Home", path: "/", color: "black", hoverColor: "pink-500" },
+    {
+      label: "Favorite",
+      path: "/Favorite",
+      color: "black",
+      hoverColor: "red-400",
+    },
+    {
+      label: "Category",
+      path: "/Catagory",
+      color: "black",
+      hoverColor: "sky-400",
+    },
+    {
+      label: "Random",
+      path: "/Random",
+      color: "black",
+      hoverColor: "violet-600",
+    },
+  ];
+
   return (
-    <Navbar isBordered maxWidth="full" className="overflow-auto">
-      <NavbarBrand className="col-span-2 w-80">
-        <NavbarContent className="mr-4">
-          <NavbarItem className="font-bold text-5xl text-inherit text-black focus-in-expand-fwd max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-4xl">
-            AnimeList
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      isBordered
+      maxWidth="full"
+      className="overflow-auto"
+    >
+      <NavbarContent>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+        />
+        <NavbarBrand className="col-span-2 w-auto">
+          <NavbarContent className="mr-4">
+            <NavbarItem className="font-bold text-5xl text-inherit text-black focus-in-expand-fwd max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-4xl">
+              AnimeList
+            </NavbarItem>
+          </NavbarContent>
+        </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent
+        className="hidden sm:flex gap-5 sm:justify-start"
+        justify="center"
+      >
+        {menuItems.map((item) => (
+          <NavbarItem key={item.label} className="px-5">
+            <Link
+              to={item.path}
+              className={`font-bold text-xl text-${item.color} hover:text-${item.hoverColor}`}
+            >
+              {item.label}
+            </Link>
           </NavbarItem>
-        </NavbarContent>
-      </NavbarBrand>
+        ))}
+      </NavbarContent>
 
-      <NavbarBrand className="flex justify-center items-center sm:flex gap-5 sm:justify-start">
-        <NavbarItem className="px-5">
-          <Link
-            to="/"
-            className="font-bold text-xl text-black hover:text-pink-500"
-          >
-            Home
-          </Link>
-        </NavbarItem>
-
-        <NavbarItem className="px-5">
-          <Link
-            to="/Favorite"
-            className="font-bold text-xl text-black hover:text-red-400"
-          >
-            Favorite
-          </Link>
-        </NavbarItem>
-
-        <NavbarItem className="px-5">
-          <Link
-            to="/Catagory"
-            className="font-bold text-xl text-black hover:text-sky-400"
-          >
-            Category
-          </Link>
-        </NavbarItem>
-
-        <NavbarItem className="px-5">
-          <Link
-            to="/Random"
-            className="font-bold text-xl text-black hover:text-violet-600"
-          >
-            Random
-          </Link>
-        </NavbarItem>
-      </NavbarBrand>
-
-      <NavbarBrand className="ml-auto flex justify-end items-center px-2">
+      <NavbarContent
+        justify="end"
+        className="ml-auto flex justify-end items-center px-2"
+      >
         <NavbarItem className="flex items-center">
           <Input
             type="text"
             label="Searching.."
             size="sm"
-            className="w-80"
+            className="w-60"
             disabled={Dis}
             onChange={addInput}
             value={inputText}
@@ -102,7 +121,21 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
             inputText={inputText}
           />
         </NavbarItem>
-      </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarMenu>
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item.label}-${index}`}>
+            <Link
+              to={item.path}
+              className={`w-full text-${item.color} hover:text-${item.hoverColor}`}
+              size="lg"
+            >
+              {item.label}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   );
 };
