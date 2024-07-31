@@ -46,19 +46,19 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
     { label: "Home", path: "/", color: "black", hoverColor: "pink-500" },
     {
       label: "Favorite",
-      path: "/Favorite",
+      path: "/favorite",
       color: "black",
       hoverColor: "red-400",
     },
     {
       label: "Category",
-      path: "/Catagory",
+      path: "/catagory",
       color: "black",
       hoverColor: "sky-400",
     },
     {
       label: "Random",
-      path: "/Random",
+      path: "/random",
       color: "black",
       hoverColor: "violet-600",
     },

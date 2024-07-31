@@ -23,66 +23,66 @@ const router = createBrowserRouter([
   { path: "/", element: <App /> },
 
   {
-    path: "/Random",
+    path: "/random",
     element: <Random />,
   },
 
   {
-    path: "/Catagory",
+    path: "/catagory",
     element: <Catagory />,
   },
 
   {
-    path: "/Favorite",
+    path: "/favorite",
     element: <Favorite />,
   },
 
   {
-    path: "/DetailView",
+    path: "/detailView",
     element: <DetailView />,
   },
   {
-    path: "/Trending",
+    path: "/trending",
     element: <Trending />,
   },
   {
-    path: "/Catagory/MidleSchool",
+    path: "/catagory/midleSchool",
     element: <MidleSchool />,
   },
   {
-    path: "/Catagory/Cycling",
+    path: "/catagory/cycling",
     element: <Cycling />,
   },
   {
-    path: "/Catagory/ElementarySchool",
+    path: "/catagory/elementarySchool",
     element: <ElementarySchool />,
   },
   {
-    path: "/Catagory/Mermaid",
+    path: "/catagory/mermaid",
     element: <Mermaid />,
   },
   {
-    path: "/Catagory/Android",
+    path: "/catagory/android",
     element: <Android />,
   },
   {
-    path: "/Catagory/AllGirlSchool",
+    path: "/catagory/allgirlschool",
     element: <AllGirlSchool />,
   },
   {
-    path: "/Catagory/Vampire",
+    path: "/catagory/vampire",
     element: <Vampire />,
   },
   {
-    path: "/Catagory/Wrestling",
+    path: "/catagory/wrestling",
     element: <Wrestling />,
   },
   {
-    path: "/Catagory/Samurai",
+    path: "/catagory/samurai",
     element: <Samurai />,
   },
   {
-    path: "/Catagory/Elf",
+    path: "/catagory/elf",
     element: <Elf />,
   },
 ]);

@@ -62,7 +62,7 @@ const Catagory = () => {
           </Link>
 
           <Link
-            to="/Catagory/Cycling"
+            to="/catagory/cycling"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -90,7 +90,7 @@ const Catagory = () => {
           </Link>
 
           <Link
-            to="/Catagory/ElementarySchool"
+            to="/catagory/elementaryschool"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -118,7 +118,7 @@ const Catagory = () => {
           </Link>
 
           <Link
-            to="/Catagory/Mermaid"
+            to="/catagory/mermaid"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -146,7 +146,7 @@ const Catagory = () => {
           </Link>
 
           <Link
-            to="/Catagory/Android"
+            to="/catagory/android"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -174,7 +174,7 @@ const Catagory = () => {
           </Link>
 
           <Link
-            to="/Catagory/AllGirlSchool"
+            to="/catagory/allgirlschool"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -202,7 +202,7 @@ const Catagory = () => {
           </Link>
 
           <Link
-            to="/Catagory/Vampire"
+            to="/catagory/vampire"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -230,7 +230,7 @@ const Catagory = () => {
           </Link>
 
           <Link
-            to="/Catagory/Wrestling"
+            to="/catagory/wrestling"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -258,7 +258,7 @@ const Catagory = () => {
           </Link>
 
           <Link
-            to="/Catagory/Samurai"
+            to="/catagory/samurai"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -286,7 +286,7 @@ const Catagory = () => {
           </Link>
 
           <Link
-            to="/Catagory/Elf"
+            to="/catagory/elf"
             isFooterBlurred
             radius="lg"
             className="border-none box"
