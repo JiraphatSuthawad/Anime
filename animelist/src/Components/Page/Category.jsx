@@ -34,7 +34,7 @@ const Category = () => {
       <div className="flex justify-center mt-5 ">
         <div className="grid grid-cols-5 gap-x-16 gap-y-0 mx-15 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3 max-xl:grid-cols-4  ">
           <Link
-            to="/Category/MidleSchool"
+            to="/category/midleschool"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -62,7 +62,7 @@ const Category = () => {
           </Link>
 
           <Link
-            to="/catagory/cycling"
+            to="/category/cycling"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -90,7 +90,7 @@ const Category = () => {
           </Link>
 
           <Link
-            to="/catagory/elementaryschool"
+            to="/category/elementaryschool"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -118,7 +118,7 @@ const Category = () => {
           </Link>
 
           <Link
-            to="/catagory/mermaid"
+            to="/category/mermaid"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -146,7 +146,7 @@ const Category = () => {
           </Link>
 
           <Link
-            to="/catagory/android"
+            to="/category/android"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -174,7 +174,7 @@ const Category = () => {
           </Link>
 
           <Link
-            to="/catagory/allgirlschool"
+            to="/category/allgirlschool"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -202,7 +202,7 @@ const Category = () => {
           </Link>
 
           <Link
-            to="/catagory/vampire"
+            to="/category/vampire"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -230,7 +230,7 @@ const Category = () => {
           </Link>
 
           <Link
-            to="/catagory/wrestling"
+            to="/category/wrestling"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -258,7 +258,7 @@ const Category = () => {
           </Link>
 
           <Link
-            to="/catagory/samurai"
+            to="/category/samurai"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -286,7 +286,7 @@ const Category = () => {
           </Link>
 
           <Link
-            to="/catagory/elf"
+            to="/category/elf"
             isFooterBlurred
             radius="lg"
             className="border-none box"
