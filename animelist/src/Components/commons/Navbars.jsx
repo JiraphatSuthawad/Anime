@@ -38,7 +38,7 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 850);
+      setIsMobileView(window.innerWidth <= 1000);
     };
 
     window.addEventListener("resize", handleResize);
@@ -93,7 +93,7 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
       </NavbarContent>
 
       <NavbarContent
-        className="hidden sm:flex gap-5 sm:justify-start"
+        className={`${isMobileView ? "hidden" : "flex"} gap-5 sm:justify-start`}
         justify="center"
       >
         {menuItems.map((item) => (
@@ -124,34 +124,36 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
         </div>
       </NavbarContent>
 
-      <NavbarMenu>
-        <div className="p-4 flex justify-center items-center">
-          <Input
-            type="text"
-            label="Searching.."
-            size="sm"
-            className="w-50 h-full"
-            disabled={Dis}
-            onChange={addInput}
-            value={inputText}
-          />
-          <ButtonSearch
-            handleSearchClick={handleSearchClick}
-            Dis={Dis}
-            inputText={inputText}
-          />
-        </div>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item.label}-${index}`}>
-            <Link
-              to={item.path}
-              className={`w-full text-${item.color} hover:text-${item.hoverColor}`}
-            >
-              {item.label}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
+      {isMobileView && (
+        <NavbarMenu isOpen={isMenuOpen}>
+          <div className="p-4 flex justify-center items-center">
+            <Input
+              type="text"
+              label="Searching.."
+              size="sm"
+              className="w-50 h-full"
+              disabled={Dis}
+              onChange={addInput}
+              value={inputText}
+            />
+            <ButtonSearch
+              handleSearchClick={handleSearchClick}
+              Dis={Dis}
+              inputText={inputText}
+            />
+          </div>
+          {menuItems.map((item, index) => (
+            <NavbarMenuItem key={`${item.label}-${index}`}>
+              <Link
+                to={item.path}
+                className={`w-full text-${item.color} hover:text-${item.hoverColor}`}
+              >
+                {item.label}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
+      )}
     </Navbar>
   );
 };
