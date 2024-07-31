@@ -5,7 +5,6 @@ import App from "./App";
 import "./index.css";
 import Random from "./Components/Page/Random";
 import DetailView from "./Components/commons/DetailView";
-import Category from "./Components/Page/Category";
 import MidleSchool from "./Components/Page/Category/1/MidleSchool";
 import Cycling from "./Components/Page/Category/2/Cycling";
 import ElementarySchool from "./Components/Page/Category/3/ElementarySchool";
@@ -18,6 +17,7 @@ import Samurai from "./Components/Page/Category/9/Samurai";
 import Elf from "./Components/Page/Category/10/Elf";
 import Trending from "./Components/Page/Trending";
 import Favorite from "./Components/Page/Favorite";
+import Catagory from "./Components/Page/Category";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
