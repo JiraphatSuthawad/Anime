@@ -28,13 +28,8 @@ const router = createBrowserRouter([
   },
 
   {
-<<<<<<< HEAD
     path: "/catagory",
     element: <Catagory />,
-=======
-    path: "/Category",
-    element: <Category />,
->>>>>>> main
   },
 
   {
@@ -51,7 +46,6 @@ const router = createBrowserRouter([
     element: <Trending />,
   },
   {
-<<<<<<< HEAD
     path: "/catagory/midleSchool",
     element: <MidleSchool />,
   },
@@ -89,45 +83,6 @@ const router = createBrowserRouter([
   },
   {
     path: "/catagory/elf",
-=======
-    path: "/Category/MidleSchool",
-    element: <MidleSchool />,
-  },
-  {
-    path: "/Category/Cycling",
-    element: <Cycling />,
-  },
-  {
-    path: "/Category/ElementarySchool",
-    element: <ElementarySchool />,
-  },
-  {
-    path: "/Category/Mermaid",
-    element: <Mermaid />,
-  },
-  {
-    path: "/Category/Android",
-    element: <Android />,
-  },
-  {
-    path: "/Category/AllGirlSchool",
-    element: <AllGirlSchool />,
-  },
-  {
-    path: "/Category/Vampire",
-    element: <Vampire />,
-  },
-  {
-    path: "/Category/Wrestling",
-    element: <Wrestling />,
-  },
-  {
-    path: "/Category/Samurai",
-    element: <Samurai />,
-  },
-  {
-    path: "/Category/Elf",
->>>>>>> main
     element: <Elf />,
   },
 ]);

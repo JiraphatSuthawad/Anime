@@ -62,11 +62,7 @@ const Category = () => {
           </Link>
 
           <Link
-<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/cycling"
-=======
-            to="/Category/Cycling"
->>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -94,11 +90,7 @@ const Category = () => {
           </Link>
 
           <Link
-<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/elementaryschool"
-=======
-            to="/Category/ElementarySchool"
->>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -126,11 +118,7 @@ const Category = () => {
           </Link>
 
           <Link
-<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/mermaid"
-=======
-            to="/Category/Mermaid"
->>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -158,11 +146,7 @@ const Category = () => {
           </Link>
 
           <Link
-<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/android"
-=======
-            to="/Category/Android"
->>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -190,11 +174,7 @@ const Category = () => {
           </Link>
 
           <Link
-<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/allgirlschool"
-=======
-            to="/Category/AllGirlSchool"
->>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -222,11 +202,7 @@ const Category = () => {
           </Link>
 
           <Link
-<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/vampire"
-=======
-            to="/Category/Vampire"
->>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -254,11 +230,7 @@ const Category = () => {
           </Link>
 
           <Link
-<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/wrestling"
-=======
-            to="/Category/Wrestling"
->>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -286,11 +258,7 @@ const Category = () => {
           </Link>
 
           <Link
-<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/samurai"
-=======
-            to="/Category/Samurai"
->>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -318,11 +286,7 @@ const Category = () => {
           </Link>
 
           <Link
-<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/elf"
-=======
-            to="/Category/Elf"
->>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
