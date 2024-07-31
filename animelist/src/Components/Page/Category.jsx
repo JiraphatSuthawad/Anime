@@ -6,7 +6,7 @@ import Navbars from "../commons/Navbars";
 import { Card, CardFooter, Image } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 
-const Catagory = () => {
+const Category = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -29,12 +29,12 @@ const Catagory = () => {
 
   console.log(data);
   return (
-    <div className=" w-full cat-bg">
+    <div className=" w-full cat-bg h-full">
       <Navbars />
-      <div className="flex justify-center mt-7 ">
-        <div className="grid grid-cols-5 gap-4 mx-10 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3 max-xl:grid-cols-4  ">
+      <div className="flex justify-center mt-5 ">
+        <div className="grid grid-cols-5 gap-x-16 gap-y-0 mx-15 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3 max-xl:grid-cols-4  ">
           <Link
-            to="/Catagory/MidleSchool"
+            to="/Category/MidleSchool"
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -62,7 +62,11 @@ const Catagory = () => {
           </Link>
 
           <Link
+<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/cycling"
+=======
+            to="/Category/Cycling"
+>>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -90,7 +94,11 @@ const Catagory = () => {
           </Link>
 
           <Link
+<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/elementaryschool"
+=======
+            to="/Category/ElementarySchool"
+>>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -118,7 +126,11 @@ const Catagory = () => {
           </Link>
 
           <Link
+<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/mermaid"
+=======
+            to="/Category/Mermaid"
+>>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -146,7 +158,11 @@ const Catagory = () => {
           </Link>
 
           <Link
+<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/android"
+=======
+            to="/Category/Android"
+>>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -174,7 +190,11 @@ const Catagory = () => {
           </Link>
 
           <Link
+<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/allgirlschool"
+=======
+            to="/Category/AllGirlSchool"
+>>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -202,7 +222,11 @@ const Catagory = () => {
           </Link>
 
           <Link
+<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/vampire"
+=======
+            to="/Category/Vampire"
+>>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -230,7 +254,11 @@ const Catagory = () => {
           </Link>
 
           <Link
+<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/wrestling"
+=======
+            to="/Category/Wrestling"
+>>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -258,7 +286,11 @@ const Catagory = () => {
           </Link>
 
           <Link
+<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/samurai"
+=======
+            to="/Category/Samurai"
+>>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -286,7 +318,11 @@ const Catagory = () => {
           </Link>
 
           <Link
+<<<<<<< HEAD:animelist/src/Components/Page/Catagory.jsx
             to="/catagory/elf"
+=======
+            to="/Category/Elf"
+>>>>>>> main:animelist/src/Components/Page/Category.jsx
             isFooterBlurred
             radius="lg"
             className="border-none box"
@@ -318,4 +354,4 @@ const Catagory = () => {
   );
 };
 
-export default Catagory;
+export default Category;

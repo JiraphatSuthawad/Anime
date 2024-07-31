@@ -27,7 +27,11 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
       Swal.fire({
         position: "center",
         icon: "success",
+<<<<<<< HEAD
         title: `Search: ${inputText}`,
+=======
+        title: `Seach : ${inputText}`,
+>>>>>>> main
         showConfirmButton: false,
         timer: 1500,
       });
@@ -101,10 +105,55 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
         ))}
       </NavbarContent>
 
+<<<<<<< HEAD
       <NavbarContent
         justify="end"
         className="ml-auto flex justify-end items-center px-2"
       >
+=======
+      <NavbarBrand className="flex justify-center items-center sm:flex gap-5 sm:justify-start">
+        <NavbarItem className="px-5">
+          <Link
+            to="/"
+            className="font-bold text-xl text-black hover:text-pink-500"
+          >
+            Home
+          </Link>
+        </NavbarItem>
+
+        <NavbarItem className="px-5">
+          <Link
+            to="/Favorite"
+            className="font-bold text-xl text-black hover:text-red-400"
+            onClick={() => setDis(true)}
+          >
+            Favorite
+          </Link>
+        </NavbarItem>
+
+        <NavbarItem className="px-5">
+          <Link
+            to="/Category"
+            className="font-bold text-xl text-black hover:text-sky-400"
+            onClick={() => setDis(true)}
+          >
+            Category
+          </Link>
+        </NavbarItem>
+
+        <NavbarItem className="px-5">
+          <Link
+            to="/Random"
+            className="font-bold text-xl text-black hover:text-violet-600"
+            onClick={() => setDis(true)}
+          >
+            Random
+          </Link>
+        </NavbarItem>
+      </NavbarBrand>
+
+      <NavbarBrand className="flex justify-end items-center px-2 sm:flex sm:justify-start">
+>>>>>>> main
         <NavbarItem className="flex items-center">
           <Input
             type="text"
