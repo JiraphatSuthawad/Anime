@@ -9,7 +9,7 @@ function ButtonSearch({ handleSearchClick, Dis }) {
       disabled={Dis}
       color="white"
       variant="ghost"
-      className="mx-3 font-bold text-lg text-black h-12 bg-white"
+      className="mx-3 h-12 sm:bg-white"
     >
       <SearchIcon />
     </Button>

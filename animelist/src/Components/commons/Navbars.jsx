@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   Navbar,
@@ -17,6 +17,7 @@ import ButtonSearch from "./Button/Button-Search";
 const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
   const [inputText, setInputText] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(false);
 
   const addInput = (e) => {
     setInputText(e.target.value);
@@ -34,6 +35,17 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
       });
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 850);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const menuItems = [
     { label: "Home", path: "/", color: "black", hoverColor: "pink-500" },
@@ -65,13 +77,15 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
       className="overflow-auto"
     >
       <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
+        {isMobileView && (
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            className=" lg:hidden xl:hidden 2xl:hidden "
+          />
+        )}
         <NavbarBrand className="col-span-2 w-auto">
-          <NavbarContent className="mr-4">
-            <NavbarItem className="font-bold text-5xl text-inherit text-black focus-in-expand-fwd max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-4xl">
+          <NavbarContent className="mr-10">
+            <NavbarItem className="font-bold text-5xl text-inherit text-black focus-in-expand-fwd max-sm:text-3xl max-md:text-3xl max-lg:text-3xl max-xl:text-4xl">
               AnimeList
             </NavbarItem>
           </NavbarContent>
@@ -83,7 +97,7 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
         justify="center"
       >
         {menuItems.map((item) => (
-          <NavbarItem key={item.label} className="px-5">
+          <NavbarItem key={item.label} className="px-0">
             <Link
               to={item.path}
               className={`font-bold text-xl text-${item.color} hover:text-${item.hoverColor}`}
@@ -116,7 +130,7 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
             type="text"
             label="Searching.."
             size="sm"
-            className="w-full h-full"
+            className="w-50 h-full"
             disabled={Dis}
             onChange={addInput}
             value={inputText}
