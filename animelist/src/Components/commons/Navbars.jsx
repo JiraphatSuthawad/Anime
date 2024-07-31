@@ -24,13 +24,6 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
 
   const handleSearchClick = () => {
     if (inputText !== "") {
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: `Search: ${inputText}`,
-        showConfirmButton: false,
-        timer: 1500,
-      });
       setInputData(inputText);
       setInputText("");
     } else {
@@ -52,7 +45,7 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
     },
     {
       label: "Category",
-      path: "/catagory",
+      path: "/category",
       color: "black",
       hoverColor: "sky-400",
     },
@@ -99,18 +92,12 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
             </Link>
           </NavbarItem>
         ))}
-      </NavbarContent>
-
-      <NavbarContent
-        justify="end"
-        className="ml-auto flex justify-end items-center px-2"
-      >
-        <NavbarItem className="flex items-center">
+        <div className="g flex justify-center items-center">
           <Input
             type="text"
             label="Searching.."
             size="sm"
-            className="w-full"
+            className="w-full "
             disabled={Dis}
             onChange={addInput}
             value={inputText}
@@ -120,16 +107,31 @@ const Navbars = ({ inputData, setInputData, Dis, setDis }) => {
             Dis={Dis}
             inputText={inputText}
           />
-        </NavbarItem>
+        </div>
       </NavbarContent>
 
       <NavbarMenu>
+        <div className="p-4 flex justify-center items-center">
+          <Input
+            type="text"
+            label="Searching.."
+            size="sm"
+            className="w-full h-full"
+            disabled={Dis}
+            onChange={addInput}
+            value={inputText}
+          />
+          <ButtonSearch
+            handleSearchClick={handleSearchClick}
+            Dis={Dis}
+            inputText={inputText}
+          />
+        </div>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item.label}-${index}`}>
             <Link
               to={item.path}
               className={`w-full text-${item.color} hover:text-${item.hoverColor}`}
-              size="lg"
             >
               {item.label}
             </Link>
